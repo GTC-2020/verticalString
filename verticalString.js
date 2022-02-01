@@ -1,14 +1,12 @@
 function showVerticalMessage(str){
     const lengthOfOutputString = 10;
-    const firstLatter = "м"
+    const firstLetter = "м"
 
-    if(str[0] === firstLatter){
-        str = str[0].toUpperCase() + str.slice(1);
-    }
-    for(let i = 0; i < lengthOfOutputString; i++){
-        if(str.length === i) break;
-        console.log(str[i] + '\n');
+    str = str.startsWith(firstLetter) ? str[0].toUpperCase() + str.substr(1, 9):str.substr(0, 10);
+
+    for(let char of str){
+        console.log(`${char}\n`);
     }
     
 }
-showVerticalMessage("марафон");
+showVerticalMessage("марафон55555555555");
